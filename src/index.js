@@ -1,7 +1,16 @@
 // @flow
 import * as React from 'react'
+import { findDOMNode } from 'react-dom'
 import { observe, unobserve } from './intersection'
 import invariant from 'invariant'
+
+export function isDOMTypeElement(element: React.Element<*>) {
+  return (
+    React.isValidElement(element) &&
+    'type' in element &&
+    typeof element.type === 'string'
+  )
+}
 
 export type IntersectionOptions = {
   /** Number between 0 and 1 indicating the the percentage that should be visible before triggering. Can also be an array of numbers, to create multiple trigger points. */
@@ -119,7 +128,14 @@ export class InView extends React.Component<Props, State> {
 
   handleNode = (node: ?HTMLElement) => {
     if (this.node) unobserve(this.node)
-    this.node = node
+
+    if (node) {
+      // $FlowFixMe - find a way to transform React.Element<*> to HTMLElement
+      this.node = isDOMTypeElement(node) ? node : findDOMNode(node)
+    } else {
+      this.node = node
+    }
+
     this.observeNode()
   }
 
