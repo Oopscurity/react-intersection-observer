@@ -54,7 +54,12 @@ export default [
         plugins: [
           resolve(),
           babel(getBabelOptions({ useESModules: true })),
-          commonjs({ include: '**/node_modules/**' }),
+          commonjs({
+            include: '**/node_modules/**',
+            namedExports: {
+              'react-dom': ['findDOMNode'],
+            },
+          }),
           uglify(),
           sizeSnapshot(),
         ],

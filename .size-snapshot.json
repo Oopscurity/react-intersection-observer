@@ -5,21 +5,21 @@
     "gzipped": 1693
   },
   "dist/react-intersection-observer.umd.min.js": {
-    "bundled": 4649,
-    "minified": 4649,
-    "gzipped": 2043
+    "bundled": 321931,
+    "minified": 321393,
+    "gzipped": 101092
   },
   "dist/react-intersection-observer.esm.js": {
-    "bundled": 10034,
-    "minified": 4258,
-    "gzipped": 1630,
+    "bundled": 10436,
+    "minified": 4455,
+    "gzipped": 1697,
     "treeshaked": {
       "rollup": {
-        "code": 2894,
-        "import_statements": 376
+        "code": 3013,
+        "import_statements": 436
       },
       "webpack": {
-        "code": 4141
+        "code": 4300
       }
     }
   }
