@@ -1,11 +1,11 @@
 {
-  "name": "react-intersection-observer",
+  "name": "@oopscurity/react-intersection-observer",
   "version": "6.3.1",
   "description": "Monitor if a component is inside the viewport, using IntersectionObserver API",
   "main": "dist/react-intersection-observer.cjs.js",
   "module": "dist/react-intersection-observer.esm.js",
   "unpkg": "dist/react-intersection-observer.umd.min.js",
-  "author": "Daniel Schmidt",
+  "author": "Artem Kravchenko",
   "typings": "index.d.ts",
   "files": [
     "dist/*",
@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/thebuilder/react-intersection-observer.git"
+    "url": "https://github.com/Oopscurity/react-intersection-observer.git"
   },
   "license": "MIT",
   "keywords": [
